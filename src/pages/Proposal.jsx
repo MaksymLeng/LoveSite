@@ -1,4 +1,3 @@
-// src/pages/Proposal.jsx  (или где у тебя экран)
 import HeartParticles from "../components/HeartParticles";
 
 export default function Proposal() {
@@ -13,4 +12,3 @@ export default function Proposal() {
         </div>
     );
 }
-

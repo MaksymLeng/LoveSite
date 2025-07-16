@@ -138,12 +138,7 @@ export default function HeartParticles() {
             id="tsparticles"
             particlesLoaded={particlesLoaded}
             options={options}
-            style={{
-                position: "absolute",
-                inset: 0,
-                pointerEvents: "none", // клики проходят сквозь
-                zIndex: 0,              // ниже текста
-            }}
+            className="absolute inset-0 w-full h-full pointer-events-none z-0"
         />
     );
 }

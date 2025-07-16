@@ -7,7 +7,7 @@ export default function BackgroundVideo() {
             loop
             playsInline
         >
-            <source src="/video/bg_5min.mp4" type="video/mp4" />
+            <source src="/video/IMG_2832.MOV" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
     );

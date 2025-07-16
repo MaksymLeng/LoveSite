@@ -8,7 +8,7 @@ function makeOptions(isMobile) {
     const count = isMobile ? 30 : 60;          // меньше на мобилках
     const size = isMobile ? 16 : 24;           // базовый размер
     const minSize = isMobile ? 8 : 12;
-    const speed = isMobile ? 1.2 : 1.8;        // падают медленнее на мобилках
+    const speed = isMobile ? 1.8 : 1.8;        // падают медленнее на мобилках
     const fps = isMobile ? 30 : 60;            // экономим ресурс
 
     return {
@@ -18,7 +18,7 @@ function makeOptions(isMobile) {
             zIndex: 0,
         },
         detectRetina: true,
-        fpsLimit: fps,
+        fpsLimit: 60,
 
         interactivity: {
             detectsOn: "window",
@@ -31,7 +31,7 @@ function makeOptions(isMobile) {
 
         particles: {
             number: {
-                value: count,
+                value: 60,
                 density: {
                     enable: true,
                     area: 800,
@@ -58,8 +58,8 @@ function makeOptions(isMobile) {
             },
 
             size: {
-                value: size,
-                random: { enable: true, minimumValue: minSize },
+                value: 24,
+                random: { enable: true, minimumValue: 12 },
             },
 
             move: {

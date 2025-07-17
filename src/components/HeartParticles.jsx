@@ -5,11 +5,9 @@ import { loadAll } from "@tsparticles/all"; // включает image shape
 
 // Фабрика настроек: отдаёт разные числа/размеры в зависимости от ширины экрана
 function makeOptions(isMobile) {
-    const count = isMobile ? 30 : 60;          // меньше на мобилках
-    const size = isMobile ? 16 : 24;           // базовый размер
-    const minSize = isMobile ? 8 : 12;
-    const speed = isMobile ? 1.8 : 1.8;        // падают медленнее на мобилках
-    const fps = isMobile ? 30 : 60;            // экономим ресурс
+    const speed = isMobile ? 1.2 : 1.8;        // падают медленнее на мобилках
+    const count = isMobile ? 30 : 60;
+    const area = isMobile ? 400 : 800
 
     return {
         autoPlay: true,
@@ -31,10 +29,10 @@ function makeOptions(isMobile) {
 
         particles: {
             number: {
-                value: 60,
+                value: count,
                 density: {
                     enable: true,
-                    area: 800,
+                    area,
                 },
             },
 

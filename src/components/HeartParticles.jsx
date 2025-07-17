@@ -52,7 +52,7 @@ function makeOptions(isMobile) {
             },
 
             size: {
-                value: 24,
+                value: isMobile ? 20 : 24,
                 random: { enable: true, minimumValue: 12 },
             },
 

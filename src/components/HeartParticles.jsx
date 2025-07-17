@@ -5,9 +5,8 @@ import { loadAll } from "@tsparticles/all"; // включает image shape
 
 // Фабрика настроек: отдаёт разные числа/размеры в зависимости от ширины экрана
 function makeOptions(isMobile) {
-    const speed = isMobile ? 1.2 : 1.8;        // падают медленнее на мобилках
+    const speed = isMobile ? 1 : 1.8;        // падают медленнее на мобилках
     const count = isMobile ? 30 : 60;
-    const area = isMobile ? 400 : 800
 
     return {
         autoPlay: true,
@@ -30,10 +29,7 @@ function makeOptions(isMobile) {
         particles: {
             number: {
                 value: count,
-                density: {
-                    enable: true,
-                    area,
-                },
+                density: { enable: false },
             },
 
             // цвет обязателен по схеме, но на image не влияет
